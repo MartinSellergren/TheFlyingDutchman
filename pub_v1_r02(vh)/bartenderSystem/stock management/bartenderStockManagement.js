@@ -10,14 +10,6 @@ setTheme(systemEnvironment.theme);
 
 window.onload = function() {
 
-//------------------ Start Beir Region -----------------------------
-    if(!hasCredential())
-    {
-        alert("Unauthorized Access!");
-        location.href='../../logintest.html';
-    }
-//-------------------- End Beir Region -----------------------------
-
 
     //these values should be implemented in the database for each beverage.
     DEFAULT_EMAIL_ADRESS = "orders@systemet.se";
@@ -145,18 +137,6 @@ function keyboardSearch(event) {
         }
     }
 }
-
-
-
-//------------------ Start Beir Region -----------------------------
-function hasCredential(){
-    if(sessionStorage.getItem('pub_uname') != null &&
-       sessionStorage.getItem('pub_pword') != null)
-        return true;
-
-    return false;
-}
-//-------------------- End Beir Region -----------------------------
 
 
 
@@ -547,8 +527,7 @@ function setTheme(theme) {
 //type="get"/"post"
 function serverRequest(action, additionalParameters, type) {
     //safety net. Not supposed to be here.
-    /*if (action == "inventory_get") return JSON.parse(getOfflineResponse()).payload;*/
-    //
+    if (action == "inventory_get") return JSON.parse(getOfflineResponse()).payload;
 
     // var user = systemEnvironment.username;
     // if (user == null) throw new Error("No credentials!");
@@ -563,14 +542,14 @@ function serverRequest(action, additionalParameters, type) {
     // var data = JSON.parse(result).payload;
     // return data;
 
-    var bev = {
-        "beer_id": 1,
-        "namn": "test",
-        "namn2": "test2",
-        "count": 10,
-        "pub_price": 5
-    };
-    return [bev];
+    // var bev = {
+    //     "beer_id": 1,
+    //     "namn": "test",
+    //     "namn2": "test2",
+    //     "count": 10,
+    //     "pub_price": 5
+    // };
+    // return [bev];
 }
 
 
