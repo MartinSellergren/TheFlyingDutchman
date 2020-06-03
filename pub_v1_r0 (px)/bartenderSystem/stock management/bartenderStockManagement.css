@@ -1,0 +1,354 @@
+body {
+	/*background-color: gray;*/
+	background-image: none;
+    line-height: normal;
+}
+
+::-webkit-scrollbar {  
+    width: 15px;  
+}  
+
+p:hover, td:hover, caption:hover, th:hover {
+    cursor: default;
+}
+
+#mainContainer {
+	box-shadow: none;
+}
+
+header {
+    /*background-color: green;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#topRight, #topLeft {
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+}
+
+.tabButtons {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: inherit;
+    align-self: flex-end;
+    padding: 5px 5px;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 25px;
+    overflow: hidden;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+
+.tabButtons:hover {
+    /*background-color: gray !important;*/
+    cursor: pointer;
+}
+
+.etcButton:hover {
+    cursor: pointer;
+}
+
+#backButton, #settingButton {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+#backButton {
+    left: 5px;    
+    top: 50%;
+    margin-top: -12.5px;
+}
+
+#helpButton {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    right: 40px;
+}
+
+#settingButton {
+    top: 5px;
+    right: 5px; 
+    vertical-align: middle;
+    line-height: 25px;
+}
+
+/*#generatedOrdersButton:hover {
+    background-color: gray;
+}*/
+
+
+#mainBody {
+    float:none;
+    height: 550px;
+    overflow: auto;
+    position: relative;
+}
+
+#popupDiv {
+    width: 700px;
+    /*height: 500px;*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    
+    /*background-color: rgb(35,31,32);*/
+    /*border: 1px solid white;*/
+    /*box-shadow: 0px 0px 15px white;*/
+    /*padding: 30px;*/
+    padding: 5vh;
+    /*color: white;*/
+    font-family: "Trebuchet MS", cursive, sans-serif;
+    font-size: 1.3em;
+    border-radius: 2px;
+    
+    display: none;
+    z-index: 901;
+}
+
+#closeButton {
+    /*text-shadow: 0px 0px 5px white;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.popupContentDiv {
+    /*margin: 3%;*/
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#mainBody table {
+    min-width: 70%;
+    border: none;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    /*color: white;*/
+}
+
+th, td {
+    border-collapse: collapse;
+    border: none;
+}
+
+tr * {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td:first-child, th:first-child {
+    text-align: left;
+}
+
+
+
+#mainBody table th {
+    /*background-color: green;*/
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+#mainBody table td {
+    padding: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*#mainBody table tr:hover {
+    background-color:black !important;
+}*/
+
+.name_td:hover {
+    cursor: pointer;
+}
+
+#mainBody table tr:nth-child(2):hover {
+    cursor: inherit;
+}
+
+table caption div {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+table input[type="text"] {
+    height: 20px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.85);
+}
+
+input[type="checkbox"]:active {
+    
+}
+
+#tableButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#tableButton:hover {
+    cursor: pointer;
+}
+
+#emailAdressText {
+    display: inline;
+    margin-right: 10px;
+    text-align: left;
+}
+
+#emailAdressTextfield {
+    width: 200px;
+}
+
+#emailTextText {
+    margin: 35px 0 15px 0px;
+    text-align: left;
+}
+
+#emailTextArea, #emailTextArea_beverageEditPopup {
+    margin-left: 10%;
+    width: 80%;
+    height: 50%;
+    resize: vertical;
+}
+
+#buttonsTempDiv {
+    text-align: center;
+    width: 100%;
+}
+
+.editButton, .confirmButton, .cancelButton {
+    padding: 3px 5px;
+    margin: 2px 6px;
+}
+
+#emailPopupHelpText {
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    font-size: 0.7em;
+    /*color: gray;*/
+    text-align: right;
+    visibility: hidden;
+}
+
+
+.beverageEditPopupRow [type="text"], #generateOrderButton_beverageEditPopup, #obsoleteCheckbox_beverageEditPopup {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.beverageEditPopupRow {
+    height: 45px;
+    line-height: 40px;
+    border: 3px solid transparent;
+}
+
+
+
+#topDiv_beverageEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: green;*/
+    height: 50px;
+}
+
+#leftPlaceholder_beverageEdit, #rightPlaceholder_beverageEdit {
+    flex-grow: 3;
+    flex-basis: 0;
+}
+
+#rightPlaceholder_beverageEdit {
+    align-self: flex-bottom;
+}
+
+#label_beverageEdit {
+    flex-grow: 5;
+    flex-basis: 0;
+    /*color: white;*/
+    font-weight: bolder;
+    text-align: center;
+}
+
+#editTabButton_beverageEdit, #infoTabButton_beverageEdit, #rightPlaceholder_beverageEdit {
+    /*background-color: green;*/
+    margin: 0 5px;
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#editTabButton_beverageEdit, #infoTabButton_beverageEdit {
+    align-self: flex-end;
+    padding: 6px 2px;
+}
+
+#editTabButton_beverageEdit:hover, #infoTabButton_beverageEdit:hover {
+    /*background-color: gray !important;*/
+    cursor: pointer;
+}
+
+#helpButton_beverageEdit {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+
+
+#settingPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -250px;
+    width: 500px; 
+    height: 450px;
+    /*background-color: rgb(35,31,32);*/
+    /*border: 1px solid white;*/
+    
+    padding: 5px;
+    /*color: white;*/
+    text-align: center;
+    font-family: "Trebuchet MS", cursive, sans-serif;
+    font-size: 1.3em;
+    border-radius: 2px;
+    
+    z-index: 951;
+    visibility: hidden;
+}
+
+#settingPopup > .textTitle {
+    margin-top: 50px;
+    font-size: 2em;
+    font-weight: 400;
+}

@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------------------------------------------*/
+
+body {
+    background-image: url("http://i.imgur.com/PIJWrEi.jpg");
+    font: 13px Helvetica, Arial, sans-serif;
+}
+
+#test{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -175px;
+    width: 350px;
+    height: 450px;
+    background-color: rgba(35,31,32, 0.6);
+    box-shadow: 0px 0px 15px white;
+    text-align: center;
+}
+
+#buttonPos{
+    margin: auto 0px;
+    width: 100px;
+}
+
+#picture_log{
+    margin: 30px auto;
+    border: 2px solid;
+    border-radius: 100px;
+}
+
+#uNameErrMsg{
+    color: red;
+    opacity: 0.7;
+    font-size: 1.125em;
+}
+
+#uPasswordErrMsg{
+    color: red;
+    opacity: 0.7;
+    font-size: 1.125em;
+}
+
+.inputs {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #EAE7E7;
+    border: 1px solid #C8C8C8;
+    color: #777;
+    
+    /*---------------------------------------*/
+    margin: 0px auto;
+    padding: 15px;
+    width: 200px;
+}
+
+.inputs:focus {
+    -webkit-box-shadow: 0 0 2px #ED1C24 inset;
+    -moz-box-shadow: 0 0 2px #ed1c24 inset;
+    -ms-box-shadow: 0 0 2px #ed1c24 inset;
+    -o-box-shadow: 0 0 2px #ed1c24 inset;
+    box-shadow: 0 0 2px #ED1C24 inset;
+    background-color: #FFF;
+    border: 1px solid #ED1C24;
+    outline: none;
+}
+
+h1 {
+    color: grey;
+    font-family: Andale Mono,AndaleMono,monospace; 
+    margin-left: 20px;
+    text-align: left;
+}
+
+.label{
+    display: inline-block;
+}
+
+.textbox { 
+    background: transparent url(http://html-generator.weebly.com/files/theme/input-text-8.png) repeat-x; 
+    border: 1px solid #999; 
+    outline:0; 
+    height:40px; 
+    width: 275px; 
+}
+
+.pButton {
+    width: 150px;
+    height: 40px;
+    color: white;
+    font-size: 1.25em;
+    margin: 0px auto;
+    background-color: rgba(0,0,0,0.3);
+    border-style: none;
+}
+
+.neonButton {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.neonButton:hover {
+    box-shadow: 0px 0px 3px white;
+    cursor: pointer;
+}

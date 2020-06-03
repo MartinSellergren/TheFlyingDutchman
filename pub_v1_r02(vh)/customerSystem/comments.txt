@@ -1,0 +1,21 @@
+
+
+V_bartenderMainPage.html
+- Put script tags in the bottom of body to avoid javascript blocking the browser from loading the web page (content and appearance).
+Beir: I use the onload event.
+- If you want to separate view and behaviour, move all 'onclick'/'ondrop'/etc events to javascript code instead.
+Beir: I think I put many binded event of onclick into the control but you are right that I still left some of them in the model. Thank for remind me that. I have move them all now (I guess).
+- Run this file at the W3 html validator http://validator.w3.org
+Beir: Thank you. This is very useful, I check and I realize what I forget to do and what I did wrong.
+
+S_bartenderMainPage.css
+- to center the #mainContainer, it is easier to just do: margin-left: auto, margin-right: auto. Then you do not need the -300px-tricks etc. You can also remove position:fixed if you do it in this way.
+Beir: I did that but the the main container does appear at the center (horizontal) of the page but not in the middle of the page (both horizontal and vertical).
+- If one wants to read more about general css practices, here is a link: https://developer.mozilla.org/e
+n-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+
+M_bartenderMainPage.js
+- Add 'use strict' in the beginning of every function. It makes the browser enforce a more strict javascript style that can help you avoid making mistakes. 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+quote: "First, strict mode eliminates some JavaScript silent errors by changing them to throw errors. Second, strict mode fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode. Third, strict mode prohibits some syntax likely to be defined in future versions of ECMAScript."
+Beir: This is awesome.

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Dutchman - Stock Management</title>
+    <link rel="shortcut icon" href="http://www.iconarchive.com/download/i41436/cedarseed/cocktails/Vodka-Martini.ico" />
+	<link rel="stylesheet" href="../S_bartenderMainPage.css">
+	<link rel="stylesheet" href="bartenderStockManagement.css">
+    <link rel="stylesheet" href="bartenderStockManagement_dark.css" id="darkStylesheet">
+    <link rel="stylesheet" href="bartenderStockManagement_light.css" id="lightStylesheet">
+    <script src="../bartender_shared.js"></script>
+    <script src="bartenderStockManagement.js"></script>
+    <script src="bartenderStockManagement_generatedOrdersTab.js"></script>
+    <script src="bartenderStockManagement_incomingInventoryTab.js"></script>
+    <script src="bartenderStockManagement_beverageEditTab.js"></script>
+    <script src="../../serviceData/langPack_en_sv.js"></script>
+</head>
+<body>
+	<div id="mainContainer">
+		<header>
+            <div id="topLeft">            
+                <img id="backButton" class="etcButton" title="go back" src="backButton.png" onclick="location.href='../V_bartenderMainPage.html'">
+            </div>
+            <p id="generatedOrdersButton" class="tabButtons" onclick="openTab(1)" data-locale="Generated orders"></p>
+            <p id="incomingInventoryButton" class="tabButtons" onclick="openTab(2)" data-locale="Incoming inventory"></p>
+            <p id="beverageEditButton" class="tabButtons" onclick="openTab(3)" data-locale="Beverage edit"></p>
+            <div id="topRight"></div>
+		</header>
+		<div id="mainBody">
+            <p id="settingButton" class="etcButton" onclick="openPopup('setting')">&#9776;</p>
+            <img id="helpButton" class="etcButton" title="help" src="helpButton_white.png" onclick="openPopup('help')">
+            <table></table>
+        </div>
+    </div>
+    <div id="defocus" onclick="closePopup()"></div>
+    <div id="popupDiv">
+        <p id="closeButton" title="cancel" onclick="closePopup()">&#10006;</p>
+        <div class="popupContentDiv"></div>
+    </div>
+    
+    <!-------------------------------------------------------------------------------->
+    <div id="settingPopup">
+        <p class="textTitle" data-locale="setting">Setting</p><br><br>
+        <section>
+         <table class="popupTable">
+            <tr>
+                <td data-locale="language">Language:</td>
+                <td><img src="../../img/United-Kingdom-icon.png" alt="English" class="selectedImage imageButton" onclick="setTextByLanguage('en')" id="enImgButton"/></td>
+                <td><img src="../../img/Sweden-icon.png" alt="Sverige" class="imageButton" onclick="setTextByLanguage('sv')" id="svImgButton" /></td>
+            </tr>    
+        </table>
+            <br>
+            <table class="popupTable">
+            <tr>
+                <td data-locale="theme">Theme:</td>
+                <td><img src="http://icons.iconarchive.com/icons/chrisbanks2/gCons/48/app-drawer-icon.png" alt="Dark" class="selectedImage imageButton" onclick="setTheme('dark')" id="darkThemeButton" /></td>
+                <td><img src="http://icons.iconarchive.com/icons/chrisbanks2/gCons/48/app-drawer-white-icon.png" alt="White" class="imageButton" onclick="setTheme('white')" id="whiteThemeButton" /></td>
+            </tr>    
+        </table>
+        </section><br><br>
+        <p class="neonButton" onclick="closePopup()" data-locale="saveAndExit">Save and Exit</p>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+	background-color: black;
+    color: black;
+}
+
+#mainContainer {
+    background-color: seashell;
+    border: none;
+}
+
+.tabButtonSelected {
+    background-color: seashell;
+}
+
+header {
+    background-color: orange;
+}
+
+.tabButtons:hover {
+    background-color: darkorange !important;
+}
+
+.keysearchFoundRow {
+    background-color: orangered;
+}
+
+/*#generatedOrdersButton:hover {
+    background-color: gray;
+}*/
+
+#popupDiv {
+    background-color: moccasin;
+	border: 1px solid black;
+}
+
+#emailPopupHelpText {
+    color: dimgray;
+}
+
+#mainBody table {
+    color: black;
+}
+
+#mainBody table th {
+    background-color: orange;
+}
+
+#mainBody table tr:hover {
+    background-color: moccasin !important;
+}
+
+.numInputFieldEditFocus {
+    background-color: moccasin;
+}
+
+#topDiv_beverageEdit {
+    background-color: orange;
+}
+
+#editTabButton_beverageEdit, #infoTabButton_beverageEdit, #rightPlaceholder_beverageEdit {
+    background-color: orange;
+}
+
+.selectedEditBeveragePopupTab {
+    background-color: moccasin !important;
+}
+
+#editTabButton_beverageEdit:hover, #infoTabButton_beverageEdit:hover {
+    background-color: darkorange !important;
+}
+
+#label_beverageEdit {
+    color: black;
+}
+
+#settingPopup {
+    background-color: moccasin;
+    border: 1px solid black;
+    color: black;
+}

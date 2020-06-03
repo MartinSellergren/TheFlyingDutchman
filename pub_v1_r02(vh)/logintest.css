@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------------------------------------------*/
+
+body {
+    background-image: url("http://i.imgur.com/PIJWrEi.jpg");
+    font: 2.06vh Helvetica, Arial, sans-serif;
+}
+
+#test{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -35.6vh;
+    margin-left: -27.69vh;
+    width: 55.38vh;
+    height: 71.2vh;
+    background-color: rgba(35,31,32, 0.6);
+    box-shadow: 0px 0px 2.37vh white;
+    text-align: center;
+}
+
+#buttonPos{
+    margin: auto 0px;
+    width: 15.82vh;
+}
+
+#picture_log{
+    margin: 4.75vh auto;
+    border: 0.32vh solid;
+    border-radius: 15.82vh;
+}
+
+#uNameErrMsg{
+    color: red;
+    opacity: 0.7;
+    font-size: 1.125em;
+}
+
+#uPasswordErrMsg{
+    color: red;
+    opacity: 0.7;
+    font-size: 1.125em;
+}
+
+.inputs {
+    -webkit-border-radius: 0.47vh;
+    -moz-border-radius: 0.47vh;
+    -ms-border-radius: 0.47vh;
+    -o-border-radius: 0.47vh;
+    border-radius: 0.47vh;
+    -webkit-box-shadow: 0 1px 0 #FFF, 0 -0.32vh 0.79vh rgba(0, 0, 0, 0.08) inset;
+    -moz-box-shadow: 0 1px 0 #fff, 0 -0.32vh 0.79vh rgba(0, 0, 0, 0.08) inset;
+    -ms-box-shadow: 0 1px 0 #fff, 0 -0.32vh 0.79vh rgba(0, 0, 0, 0.08) inset;
+    -o-box-shadow: 0 1px 0 #fff, 0 -0.32vh 0.79vh rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 1px 0 #FFF, 0 -0.32vh 0.79vh rgba(0, 0, 0, 0.08) inset;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #EAE7E7;
+    border: 1px solid #C8C8C8;
+    color: #777;
+    
+    /*---------------------------------------*/
+    margin: 0px auto;
+    padding: 2.37vh;
+    width: 31.65vh;
+}
+
+.inputs:focus {
+    -webkit-box-shadow: 0 0 0.32vh #ED1C24 inset;
+    -moz-box-shadow: 0 0 0.32vh #ed1c24 inset;
+    -ms-box-shadow: 0 0 0.32vh #ed1c24 inset;
+    -o-box-shadow: 0 0 0.32vh #ed1c24 inset;
+    box-shadow: 0 0 0.32vh #ED1C24 inset;
+    background-color: #FFF;
+    border: 1px solid #ED1C24;
+    outline: none;
+}
+
+h1 {
+    color: grey;
+    font-family: Andale Mono,AndaleMono,monospace; 
+    margin-left: 3.16vh;
+    text-align: left;
+}
+
+.label{
+    display: inline-block;
+}
+
+.textbox { 
+    background: transparent url(http://html-generator.weebly.com/files/theme/input-text-8.png) repeat-x; 
+    border: 1px solid #999; 
+    outline:0; 
+    height:6.33vh; 
+    width: 43.51vh; 
+}
+
+.pButton {
+    width: 23.73vh;
+    height: 6.33vh;
+    color: white;
+    font-size: 1.25em;
+    margin: 0px auto;
+    background-color: rgba(0,0,0,0.3);
+    border-style: none;
+}
+
+.neonButton {
+    padding: 0.79vh;
+    border-radius: 0.79vh;
+}
+
+.neonButton:hover {
+    box-shadow: 0px 0px 0.47vh white;
+    cursor: pointer;
+}

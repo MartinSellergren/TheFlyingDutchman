@@ -1,0 +1,76 @@
+body {
+	background-color: gray;
+}
+
+header {
+    background-color: green;
+}
+
+.tabButtonSelected {
+    background-color: rgb(35,31,32);
+    color: white;
+}
+
+.tabButtons:hover {
+    background-color: dimgray !important;
+}
+
+.keysearchFoundRow {
+    background-color: darkred;   
+}
+
+#generatedOrdersButton:hover {
+    background-color: gray;
+}
+
+#popupDiv {
+    background-color: rgb(35,31,32);
+    color: white;
+	border: 1px solid white;
+}
+
+#emailPopupHelpText {
+    color: gray;
+}
+
+#label_beverageEdit {
+    color: white;
+}
+
+#mainBody table {
+    color: white;
+}
+
+#mainBody table th {
+    background-color: green;
+}
+
+#mainBody table tr:hover {
+    background-color:black !important;
+}
+
+.numInputFieldEditFocus {
+    background-color:black;
+}
+
+#topDiv_beverageEdit {
+    background-color: green;
+}
+
+#editTabButton_beverageEdit, #infoTabButton_beverageEdit, #rightPlaceholder_beverageEdit {
+    background-color: green;
+}
+
+.selectedEditBeveragePopupTab {
+    background-color: rgb(35,31,32) !important;
+}
+
+#editTabButton_beverageEdit:hover, #infoTabButton_beverageEdit:hover {
+    background-color: dimgray !important;
+}
+
+#settingPopup {
+    background-color: rgb(35,31,32);
+    border: 1px solid white;
+    color: white;
+}

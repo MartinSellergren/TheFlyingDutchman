@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Dutchman - Bartender Page</title>
+    <link href="S_bartenderMainPage.css" rel="stylesheet" id="darkStylesheet"/>
+    <link href="S_bartenderMainPageAlt.css" rel="stylesheet" id="whiteStylesheet"/>
+    <script src="../serviceData/langPack_en_sv.js"></script>
+    <script src="C_bartenderMainPage.js"></script>
+    <script src="M_bartenderMainPage.js"></script>
+    <link rel="shortcut icon" href="http://www.iconarchive.com/download/i41436/cedarseed/cocktails/Vodka-Martini.ico" />
+</head>
+<body>
+    <div id="mainContainer">
+        <header>
+            <div id="regionTopLeft">
+                <img src="stock%20management/helpButton.png" onclick="showHelp()" alt="help" title="Help" id="help">
+                <img src="../img/logo2.png" alt="logo" id="logo">
+                <p><span data-locale="welcome">Welcome </span><span id="displayName"></span></p>
+            </div>      
+            <div id="regionTopRight">
+                <div id="shortCut0" class="shortCut" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut1" class="shortCut" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut2" class="shortCut" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut3" class="shortCut" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut4" class="shortCut" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div class="shortCutSetting">
+                    <p onclick="logout()" class="neonButton" data-locale="logout" >Logout</p>
+                    <p onclick="openInventoryPage()" class="neonButton" data-locale="inventory">Inventory</p>                                 
+                    <p onclick="openAccountPage()" class="neonButton" data-locale="account">Account</p>
+                    <p onclick="showMenuOption()" class="neonButton">&#9776;</p>
+                </div>
+            </div>
+        </header>
+        <div id="mainBody">
+            <div id="regionMiddleLeft">
+                <div class="neonBorder">
+                    <span class="neonButton" style="float: right; float: right" id="clearBill" onclick="resetAll()" >&#10006;</span>
+                    <p style="text-align: center; margin-top: 0.79vh;" data-locale="order">ORDER</p>
+                    <section id="orderList">
+                    </section>
+                </div>
+                <div class="neonBorder neonBorderTotal">
+                    <p style="float: left" data-locale="total">
+                    Total:
+                    </p>
+                    <p style="float: right" id="totalCost">
+                    0 kr
+                    </p>
+                </div>
+                <a id="undoButton" class="neonButton" style="margin-top: 1.27vh; padding: 1.58vh 1.58vh"  onclick="undoAction()" > &#x21a9;</a>
+                <a id="redoButton" class="neonButton" style="margin-top: 1.27vh; padding: 1.58vh 1.58vh"  onclick="redoAction()" > &#x21aa;</a>
+                <a id="finishButton" class="neonButton"  style="margin-top: 1.27vh; margin-left: 0.47vh; padding: 1.58vh 7.12vh" onclick="checkOut()" data-locale="finish">FINISH</a>
+            </div>
+            <div id="regionMiddleRight">
+                <div id="dynamicArea">
+                </div>    
+            </div>
+            <div id="searchRegion">
+                <p style="display: inline;" data-locale="search">SEARCH: </p>
+                <input type="text" id="searchText" onchange="searchTextChange()" placeholder="Search key word" data-placeholder="searchText">
+                <!--<input type="text" id="searchText" onkeyup="searchTextChange()" placeholder="Search key word"> -->
+                <input type="button" value="CLEAR" onclick="clearSearch()" data-value="clear">
+                <select id="cat" class="category" width="7.91vh" name="Category">
+                    <option data-locale="cat" value="0">All</option>
+                    <option data-locale="catI" value="1">Alcohol Free</option>
+                    <option data-locale="catII" value="2">Beer</option>
+                    <option data-locale="catIII" value="3">Wine</option>
+                    <option data-locale="catIV" value="4">Cider</option>
+                    <option data-locale="catV" value="5">Mixed Drinks</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="defocus"></div>
+    <div id="menuOption">
+            <p onclick="closeMenuOption()" style="float: right">&#10006;</p>
+            <p class="textTitle" data-locale="setting">Setting</p><br><br>
+            <section>
+             <table class="popupTable">
+                <tr>
+                    <td data-locale="language">Language:</td>
+                   <td><img src="../img/United-Kingdom-icon.png" alt="English" class="selectedImage imageButton" onclick="changeLanguage('en')" id="enImgButton"/></td>
+                    <td><img src="../img/Sweden-icon.png" alt="Sverige" class="imageButton" onclick="changeLanguage('sv')" id="svImgButton" /></td>
+                </tr>    
+            </table>
+                <br>
+                <table class="popupTable">
+                <tr>
+                    <td data-locale="theme">Theme:</td>
+                    <td><img src="http://icons.iconarchive.com/icons/chrisbanks2/gCons/48/app-drawer-icon.png" alt="Dark" class="selectedImage imageButton" onclick="changeTheme('dark')" id="darkTheme" /></td>
+                    <td><img src="http://icons.iconarchive.com/icons/chrisbanks2/gCons/48/app-drawer-white-icon.png" alt="White" class="imageButton" onclick="changeTheme('white')" id="whiteTheme" /></td>
+                </tr>    
+            </table>
+            </section><br><br>
+            <p class="neonButton" onclick="closeMenuOption()" data-locale="saveAndExit">Save and Exit</p>
+    </div>
+    <div id="autoLogoutPopup">
+        <br><br><br><p>The system will logout in 30 seconds.</p>
+    </div>
+    <!-- <div id="checkOutPopup" onclick="confirmCheckOut()">CHECK-OUT</div>-->
+    <div id="checkOutPopup"></div>
+    <div id="helpPopup"><img src="../img/helpOverlay.png" alt="help messages" onclick="closeMenuOption()"></div>
+    <!--<div id="helpPopup"><canvas id="helpCanvas">The browser does not support canvas. Please update to the newer version.</canvas></div>-->
+</body>
+</html>

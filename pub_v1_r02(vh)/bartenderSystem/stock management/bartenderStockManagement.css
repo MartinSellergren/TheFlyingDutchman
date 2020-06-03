@@ -1,0 +1,354 @@
+body {
+	/*background-color: gray;*/
+	background-image: none;
+    line-height: normal;
+}
+
+::-webkit-scrollbar {  
+    width: 2.37vh;  
+}  
+
+p:hover, td:hover, caption:hover, th:hover {
+    cursor: default;
+}
+
+#mainContainer {
+	box-shadow: none;
+}
+
+header {
+    /*background-color: green;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.91vh;
+}
+
+#topRight, #topLeft {
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+}
+
+.tabButtons {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: inherit;
+    align-self: flex-end;
+    padding: 0.79vh 0.79vh;
+    margin: 0 0.79vh;
+    text-align: center;
+    line-height: 3.96vh;
+    overflow: hidden;
+    overflow: hidden;
+    border-radius: 0.63vh 0.63vh 0 0;
+}
+
+.tabButtons:hover {
+    /*background-color: gray !important;*/
+    cursor: pointer;
+}
+
+.etcButton:hover {
+    cursor: pointer;
+}
+
+#backButton, #settingButton {
+    width: 3.96vh;
+    height: 3.96vh;
+    position: absolute;
+}
+
+#backButton {
+    left: 0.79vh;    
+    top: 50%;
+    margin-top: -1.98vh;
+}
+
+#helpButton {
+    position: absolute;
+    width: 3.16vh;
+    height: 3.16vh;
+    top: 1.11vh;
+    right: 6.33vh;
+}
+
+#settingButton {
+    top: 0.79vh;
+    right: 0.79vh; 
+    vertical-align: middle;
+    line-height: 3.96vh;
+}
+
+/*#generatedOrdersButton:hover {
+    background-color: gray;
+}*/
+
+
+#mainBody {
+    float:none;
+    height: 87.03vh;
+    overflow: auto;
+    position: relative;
+}
+
+#popupDiv {
+    width: 110.76vh;
+    /*height: 79.11vh;*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    
+    /*background-color: rgb(35,31,32);*/
+    /*border: 1px solid white;*/
+    /*box-shadow: 0px 0px 2.37vh white;*/
+    /*padding: 4.75vh;*/
+    padding: 5vh;
+    /*color: white;*/
+    font-family: "Trebuchet MS", cursive, sans-serif;
+    font-size: 1.3em;
+    border-radius: 0.32vh;
+    
+    display: none;
+    z-index: 901;
+}
+
+#closeButton {
+    /*text-shadow: 0px 0px 0.79vh white;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.popupContentDiv {
+    /*margin: 3%;*/
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#mainBody table {
+    min-width: 70%;
+    border: none;
+    margin-top: 6.33vh;
+    margin-left: auto;
+    margin-right: auto;
+    /*color: white;*/
+}
+
+th, td {
+    border-collapse: collapse;
+    border: none;
+}
+
+tr * {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td:first-child, th:first-child {
+    text-align: left;
+}
+
+
+
+#mainBody table th {
+    /*background-color: green;*/
+    font-weight: bold;
+    padding: 0.79vh 3.16vh;
+}
+
+#mainBody table td {
+    padding: 2.37vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*#mainBody table tr:hover {
+    background-color:black !important;
+}*/
+
+.name_td:hover {
+    cursor: pointer;
+}
+
+#mainBody table tr:nth-child(2):hover {
+    cursor: inherit;
+}
+
+table caption div {
+    position: relative;
+    margin-bottom: 1.58vh;
+}
+
+table input[type="text"] {
+    height: 3.16vh;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.85);
+}
+
+input[type="checkbox"]:active {
+    
+}
+
+#tableButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#tableButton:hover {
+    cursor: pointer;
+}
+
+#emailAdressText {
+    display: inline;
+    margin-right: 1.58vh;
+    text-align: left;
+}
+
+#emailAdressTextfield {
+    width: 31.65vh;
+}
+
+#emailTextText {
+    margin: 5.54vh 0 2.37vh 0px;
+    text-align: left;
+}
+
+#emailTextArea, #emailTextArea_beverageEditPopup {
+    margin-left: 10%;
+    width: 80%;
+    height: 50%;
+    resize: vertical;
+}
+
+#buttonsTempDiv {
+    text-align: center;
+    width: 100%;
+}
+
+.editButton, .confirmButton, .cancelButton {
+    padding: 0.47vh 0.79vh;
+    margin: 0.32vh 0.95vh;
+}
+
+#emailPopupHelpText {
+    position: absolute;
+    right: 0px;
+    bottom: 0.79vh;
+    font-size: 0.7em;
+    /*color: gray;*/
+    text-align: right;
+    visibility: hidden;
+}
+
+
+.beverageEditPopupRow [type="text"], #generateOrderButton_beverageEditPopup, #obsoleteCheckbox_beverageEditPopup {
+    margin: 0 1.58vh;
+    vertical-align: middle;
+}
+
+.beverageEditPopupRow {
+    height: 7.12vh;
+    line-height: 6.33vh;
+    border: 0.47vh solid transparent;
+}
+
+
+
+#topDiv_beverageEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: green;*/
+    height: 7.91vh;
+}
+
+#leftPlaceholder_beverageEdit, #rightPlaceholder_beverageEdit {
+    flex-grow: 3;
+    flex-basis: 0;
+}
+
+#rightPlaceholder_beverageEdit {
+    align-self: flex-bottom;
+}
+
+#label_beverageEdit {
+    flex-grow: 5;
+    flex-basis: 0;
+    /*color: white;*/
+    font-weight: bolder;
+    text-align: center;
+}
+
+#editTabButton_beverageEdit, #infoTabButton_beverageEdit, #rightPlaceholder_beverageEdit {
+    /*background-color: green;*/
+    margin: 0 0.79vh;
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#editTabButton_beverageEdit, #infoTabButton_beverageEdit {
+    align-self: flex-end;
+    padding: 0.95vh 0.32vh;
+}
+
+#editTabButton_beverageEdit:hover, #infoTabButton_beverageEdit:hover {
+    /*background-color: gray !important;*/
+    cursor: pointer;
+}
+
+#helpButton_beverageEdit {
+    width: 3.96vh;
+    height: 3.96vh;
+    margin: 0.79vh;
+    vertical-align: middle;
+}
+
+
+
+#settingPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -35.6vh;
+    margin-left: -39.56vh;
+    width: 79.11vh; 
+    height: 71.2vh;
+    /*background-color: rgb(35,31,32);*/
+    /*border: 1px solid white;*/
+    
+    padding: 0.79vh;
+    /*color: white;*/
+    text-align: center;
+    font-family: "Trebuchet MS", cursive, sans-serif;
+    font-size: 1.3em;
+    border-radius: 0.32vh;
+    
+    z-index: 951;
+    visibility: hidden;
+}
+
+#settingPopup > .textTitle {
+    margin-top: 7.91vh;
+    font-size: 2em;
+    font-weight: 400;
+}

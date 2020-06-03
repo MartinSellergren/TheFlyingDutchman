@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title>Flying Dutchman - Account Management</title>
+        <link rel="shortcut icon" href="http://www.iconarchive.com/download/i41436/cedarseed/cocktails/Vodka-Martini.ico" />
+		<script src="adminEdit.js"></script>
+		<link href="adminPage.css" rel="stylesheet" />
+	</head>
+<body>
+	<div id="mainContainer">
+		<div id="regionMiddleRight">
+		<center><table id ="userTable" width="500">
+			<tr>
+				<th align="left">Name</th>
+				<th align="left">User Name</th>
+				<th></th>
+			</tr>
+		</table></center>
+		<br>
+		<br>
+		</div>
+		<br>
+		<br>
+		<img onclick="showForm(true,'','','')" src="add_user2.png" width="42" height="42"  title="Add a new User" style="cursor: pointer" />
+		<img onclick="location.href='../V_bartenderMainPage.html'" src="go_back.png" width="40" height="40"  title="Exit Account Editing" style="cursor: pointer" />
+	</div>
+	<!--The popup DIV -->
+	<div id="light" class="white_content">
+		<center>
+		<p style="color:white">Username</p>
+		<input type="text" id="userName" />
+		<p style="color:white">Password</p>
+		<input type="password" id="password" />
+		<p style="color:white">Confirm Password</p>
+		<input type="password" id="confirmPassword" />
+		<p style="color:white">First Name</p>
+		<input type="text" id="firstName" />
+		<p style="color:white">Last Name</p>
+		<input type="text" id="lastName" />
+		<p style="color:white">Email</p>
+		<input type="text" id="email" />
+		<p style="color:white">Phone</p>
+		<input type="text" id="phone" />
+		<br>
+		<br>
+		<input type="button" id="confirmButton" onclick="updateUserInfo()" value="Save Changes" />
+		<input type="button" onclick="hideForm()" value="Cancel" />
+		<br>
+		<br>
+		<p id="errorMessage" style="color: red; visibility: hidden">Error Messages</p>
+		</center>
+	</div>
+	<div id="credit" class="white_content">
+		<center>
+		<p style="color:white">Amount of Credit to Add</p>
+		<br>
+		<br>
+		<input type="text" id="creditField" />
+		<br>
+		<br>
+		<input type="button" id="creditConfirmButton" onclick="updateCredit()" value="Add Credits" />
+		<input type="button" onclick="hideCreditEdit()" value="Cancel" />
+		<br>
+		<br>
+		<p id="creditError" style="color: lime; visibility: hidden">Error Messages</p>
+		</center>
+	</div>
+	<!-- DIV for the black area of the lightbox-->
+    <div id="fade" class="black_overlay"></div>
+</body>
+</html>

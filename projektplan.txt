@@ -1,0 +1,89 @@
+*first page*
+-click for bartender/vip custumer. (password for bartender)
+
+*bartender*
+startpage
+-display beverages for quick selection (gray if out of stock, yellow:low stock, red:very low+small digit)
+-categories -beverages (gray if out of stock)
+-items in cart (including editing functionality of items)
+-button to perform purchase
+-stock orders page button (change color if not empty) -edit stock page
+	-flik 1 default om ej tom..
+-manage regulars button
+-purchaces history page button
+-button to log out
+-button to reset all
+-back-up page (-restore database, automatic backups on file evert 30 min)
+-change theme
+
+check-out popup
+???-select vip-person (none, or name (list). if not enought money -name can't be selected, instead button: add credit page (small popup)) Selectable from list, search by letter.., also show SSN (if not recognized, ask for ID)???
+-Print receipt option
+
+manage regulars page	(undoable! -change undo button functionality)
+-display list of regulars, clickable - (popup) edit detailes (both edit credit and add credit) (history). Delete.
+-add new regular popup (SSN-number, address)
+-undo: added/ deleted VIP (not edited..)
+
+purchuces page (store vem som sålde vad som sessionStorage..)
+-list all purchuses of the day (by time...) + total sales
+-purcuses clickable -
+ (popup) show vip-name (or not vip), items+price, total price, time... Possible to remove, reduce no. of items, and to delete purchase (are you sure?). ok-button. Also print receipt.
+-filter by VIP and/or bartender user. Default filter: bartender user: good to see ones own previous sales to be able to edit/delete (no undo of sale)
+-no undo.., are you sure?-popup: edit/ deleted purchase
+
+[Update stock
+Back. Help.
+Flik 1: Nya beställningar.
+Genererade beställningar för drycker med låg lagerstatus.
+Lista: dryck, lagerantal, bocka för. Välj alla/ingen (default alla). Sortera på låg lagerstatus. Skicka.
+Klicka på order: ordertext, ordermail
+
+Flik 2: Besvarade beställningar
+Vilka av de skickade lagerbeställningarna är besvarade?
+Lista: dryck, datum skickad, (lagerstatus). Bocka för. Om ibockad: ange antal inkomna, röd ram (måste anges). Om klickad: visa orderemail/text. Sortera äldst först. Ok- text: lagret uppdaterat. Försvinner från listan.
+
+Flik 3: Dryckesspecifika val (Beverage edit)
+Lista med alla drycker i bokstavsordning. Liten knapp bredvid hjälp: edit default email text. Klicka på dryck. Ändra lagerantal, pris, "avaktivera (-utgående produkt/obsolete product)" (count=-count innan), (ändra ordermail, ändra ordertext(default står där), generera order -ej implementerad save). Låg lagerstatus nivå (kanske kan ta något i databasen..). Discard/save.]
+
+
+---------------------------------------------------------------------------------------------------------------
+*vip-custumer*
+start
+-enter vip-username + password (or pin...)
+
+'startpage' (time runs out in 3 minutes, text:'time's up' for 3 seconds, then back to start. clock in corner.)
+-display clickable list of beers (only the ones in stock)
+-favourite display at top, drag and dropable (needs additional database)
+-display items in cart - delete (one by one) (no quantity edit here - click in list/delete multiple times)
+-perform purchase. text: 'go fetch: ... in the back fridge' for 5 seconds (ignore 3-minute limit), or ok-press. Then back to start (clear textfields). Print receipt..
+-cancle purchase (are you sure?) - go back to start (clear textfields)
+-reset cart
+-view account details (credit..., also history (needs additional database))
+-log out button
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
+[[	stock orders page
+-display prepared orders for low beverages + sent stock orders (två "flikar")
+(-varje gång stock order page öppnas: skapa listor.
+	Lista med alla med låg lagerstatus, förutom de som redan har order skickad (localStorage)/ är deactivated. Genereras vid varje öppning.
+	Lista med alla skickade ordrar. Rensas vid varje öppning (-om stock nu är hög(leverans kommit)-ta bort skickad order)).
+Edit order text: samma text för alla ordrar, endast olika ölnamn (local storage)
+-varje rad: dryckNamn, lagerstatus, textfield: email, button: proceed
+-sortera på lagerstatus
+-proceede with all button
+(-varje rad skickade: dryckNamn, lagerstatus, datum skickad (sortera på datum))
+-back to startpage	
+
+edit stock page
+-list stock like on startpage
+	-when clicking, popup to edit
+	-quantity, email for stock orders(not saved..)
+	-also deactivate a beverage (-don't create stock orders), (count=-count innan)	]]

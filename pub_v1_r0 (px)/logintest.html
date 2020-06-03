@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Flying Dutchman - Log In</title>
+        <link href="logintest.css" rel="stylesheet" />
+    </head>
+<body>
+	<div id="test">	
+		<div id="regionTopLeft">
+            <img src="img/logo1.png" alt="logo" id="picture_log">
+		<form name="logInForm">
+			<label id="uNameErrMsg"></label><br>
+			<input class="inputs" name="username" placeholder="Username" type="text"><br><br>
+			<label id="uPasswordErrMsg"></label><br>
+		  	<input  class="inputs" name="password" placeholder="Passoword" type="password"  onkeypress="return checkForEnter(event)"><br><br><br>
+            <input type="button" class="pButton neonButton" onclick="authenAccount()" value="Log-In" />
+		  </form>
+        </div>
+	</div>
+</body>
+<link rel="shortcut icon" href="http://www.iconarchive.com/download/i41436/cedarseed/cocktails/Vodka-Martini.ico" />
+<script src="logintest.js"></script>
+</html>

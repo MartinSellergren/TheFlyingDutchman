@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Dutchman - Customer Page</title>
+    <link href="S_customerMainPage.css" rel="stylesheet" id="darkStylesheet"/>
+    <link href="S_customerMainPageAlt.css" rel="stylesheet" id="whiteStylesheet"/>
+    <script src="../serviceData/langPack_en_sv.js"></script>
+    <script src="C_customerMainPage.js"></script>
+    <script src="M_customerMainPage.js"></script>
+    <link rel="shortcut icon" href="http://www.iconarchive.com/download/i41436/cedarseed/cocktails/Vodka-Martini.ico" />
+</head>
+<body>
+    <div id="mainContainer">
+        <header>
+            <div id="regionTopLeft">
+                <img src="../bartenderSystem/stock%20management/helpButton.png" onclick="showHelp()" alt="help" title="Help" id="help">
+                <img src="../img/logo2.png" alt="logo" id="logo">
+                <p name="timer" id="countdown" ></p>
+            </div>      
+            <div id="regionTopRight">
+                <div id="shortCut0" class="shortCut sNoBeer" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut1" class="shortCut sNoBeer" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut2" class="shortCut sNoBeer" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut3" class="shortCut sNoBeer" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div id="shortCut4" class="shortCut sNoBeer" ondrop="drop(event)" ondragover="allowDrop(event)" data-locale="shortcut">drop shortcut here</div>
+                <div class="shortCutSetting">
+                    <p onclick="logout()" class="neonButton" data-locale="logout" >Logout</p>
+                    <p onclick="showPurchaseTable()" class="neonButton" data-locale="purchases">Purchases</p>       
+                    <p onclick="beer_roulette()" class="neonButton" data-locale="randomBeer">Random Beer</p>  
+                    <p onclick="showMenuOption()" class="neonButton">&#9776;</p>
+                </div>
+            </div>
+        </header>
+        <div id="mainBody">
+            <div id="regionMiddleLeft">
+                <div class="neonBorder">
+                    <span class="neonButton" style="float: right; float: right" id="clearBill" onclick="resetAll()" >&#10006;</span>
+                    <p style="text-align: center; margin-top: 0.79vh;" data-locale="order">ORDER</p>
+                    <section id="orderList">
+                    </section>
+                </div>
+                <div class="neonBorder neonBorderTotal">
+                    <ul>
+                      <li>
+                        <p style="float: left" data-locale="total">
+                        Total:
+                        </p>
+                       </li>
+                      <li>
+                        <p style="float: right" id="totalCost">
+                        0 kr
+                        </p>
+                        </li>
+                          <!-- added  -->
+                               </ul>
+                        <ul>
+                              <li>
+                       </br>
+                         <p  style="float: left" data = "Credit" id="Credit" data-locale="credit">
+                        Credit:
+                        </p>
+                        </li>
+                        <li>
+                        <p style="float: right" id="totalCredit">
+                        0 kr
+                        </p>
+                        </li>
+                    <!--end added  -->
+                </div>
+                <a id="undoButton" class="neonButton" style="margin-top: 1.27vh; padding: 1.58vh 1.58vh"  onclick="undoAction()" > &#x21a9;</a>
+                <a id="redoButton" class="neonButton" style="margin-top: 1.27vh; padding: 1.58vh 1.58vh"  onclick="redoAction()" > &#x21aa;</a>
+                <a id="finishButton" class="neonButton"  style="margin-top: 1.27vh; margin-left: 0.47vh; padding: 1.58vh 7.12vh" onclick="checkOut()" data-locale="finish">FINISH</a>
+            </div>
+            <div id="regionMiddleRight">
+                <div id="dynamicArea">
+                </div>    
+            </div>
+            <div id="searchRegion">
+                <p style="display: inline;" data-locale="search">SEARCH: </p>
+                <input type="text" id="searchText" onchange="searchTextChange()" placeholder="Search key word" data-placeholder="searchText">
+                <!--<input type="text" id="searchText" onkeyup="searchTextChange()" placeholder="Search key word"> -->
+                <input type="button" value="CLEAR" onclick="clearSearch()" data-value="clear">
+                <select id="cat" name="Category" width="7.91vh" class="category">
+                    <option value="0" data-locale="cat">All</option>
+                    <option value="1" data-locale="catI">Alcohol Free</option>
+                    <option value="2" data-locale="catII">Beer</option>
+                    <option value="3" data-locale="catIII">Wine</option>
+                    <option value="4" data-locale="catIV">Cider</option>
+                    <option value="5" data-locale="catV">Mixed Drinks</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!--added  -->
+    <div id="purchaseTable">
+    <p onclick="closeMenuOption()" style="float: right">&#10006;</p>
+            <p class="textTitle" data="purchase">Purchase History</p><br><br>
+            <section>
+            <table class="historyTable">
+                <tr>
+                    <td data-locale="time">Time</td>
+                    <td data-locale="bname">Name</td>
+                    <td data-locale="price">price</td>
+                </tr>
+                <tr>
+                    <td id="time1">loading..</td>
+                    <td id="beerName1"></td>
+                    <td id="price1"></td>
+                </tr>
+                <tr>
+                    <td id="time2">loading..</td>
+                    <td id="beerName2"></td>
+                    <td id="price2"></td>
+                </tr>
+                <tr>
+                    <td id="time3">loading..</td>
+                    <td id="beerName3"></td>
+                    <td id="price3"></td>
+                </tr>
+                <tr>
+                    <td id="time4">loading..</td>
+                    <td id="beerName4"></td>
+                    <td id="price4"></td>
+                </tr> 
+                <tr>
+                    <td id="time5">loading..</td>
+                    <td id="beerName5"></td>
+                    <td id="price5"></td>
+                </tr>
+            </table>
+            </section>
+    </div>
+    <!--end added  -->
+    <div id="defocus"></div>
+    <div id="menuOption">
+            <p onclick="closeMenuOption()" style="float: right">&#10006;</p>
+            <p class="textTitle" data-locale="setting">Setting</p><br><br>
+            <section>
+             <table class="popupTable">
+                <tr>
+                    <td data-locale="language">Language:</td>
+                   <td><img src="../img/United-Kingdom-icon.png" alt="English" class="selectedImage imageButton" onclick="changeLanguage('en')" id="enImgButton"/></td>
+                    <td><img src="../img/Sweden-icon.png" alt="Sverige" class="imageButton" onclick="changeLanguage('sv')" id="svImgButton" /></td>
+                </tr>    
+            </table>
+                <br>
+                <table class="popupTable">
+                <tr>
+                    <td data-locale="theme">Theme:</td>
+                    <td><img src="http://icons.iconarchive.com/icons/chrisbanks2/gCons/48/app-drawer-icon.png" alt="Dark" class="selectedImage imageButton" onclick="changeTheme('dark')" id="darkTheme" /></td>
+                    <td><img src="http://icons.iconarchive.com/icons/chrisbanks2/gCons/48/app-drawer-white-icon.png" alt="White" class="imageButton" onclick="changeTheme('white')" id="whiteTheme" /></td>
+                </tr>    
+            </table>
+            </section><br><br>
+            <p class="neonButton" onclick="closeMenuOption()" data-locale="saveAndExit">Save and Exit</p>
+    </div>
+    <div id="autoLogoutPopup">
+        <br><br><br><p>The system will logout in 30 seconds.</p>
+    </div>
+    <div id="checkOutPopup"></div>
+    <div id="beerPopup" onclick="showView()"></div>
+    <div id="helpPopup"><img src="../img/helpOverlay.png" alt="help messages" onclick="closeMenuOption()"></div>
+<div id="confirmLogoutPopup" data="confirmLogout"> <br><br><br>Do you want to log out?
+<br><br><p class="neonButton" onclick="realLogout()" data="confirmYes">Yes!</p> 
+<br><p class="neonButton" onclick="showView()" data="confirmNo">No!</p>
+</div>
+<div id="resetTimer" > 
+<br><br><br>
+<p data-locale="resetTimer">25 Seconds left before log out!<br>Do you need more time?</p>
+<br><br><p class="neonButton" onclick="moreTime();showView()" data-locale="confirmYes">Yes!</p> 
+<br><p class="neonButton" onclick="showView()" data-locale="confirmNo">No!</p>
+</div>
+</body>
+</html>
